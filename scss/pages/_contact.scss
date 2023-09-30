@@ -1,0 +1,269 @@
+.contactpage {
+    overflow-x: hidden;
+    .getintouch {
+        padding-top: calc(80px + var(--height-header));
+        .blur {
+            &.--section {
+                opacity: 0.8;
+                top: -20%;
+                right: -25%;
+                @include transform(translate(1%, -50%));
+                img {
+                    width: 150%;
+                }
+            }
+        }
+        .heading {
+            margin-bottom: 52px;
+        }
+        .form {
+            grid-area: 1/1/2/9;
+            margin-right: 37px;
+            &-container {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                gap: 25px;
+            }
+            &-group {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 32px;
+                @include transition(var(--duration));
+                textarea {
+                    resize: none;
+                    overflow: hidden;
+                    border-radius: 14px;
+                    height: 162px;
+                    outline: none;
+                    &:focus {
+                        border: 1px solid var(--main-cl);
+                    }
+                    &:active {
+                        border: 1px solid var(--main-cl);
+                    }
+                }
+                // .form-input {
+                //     border: 1px solid #010725;
+                // }
+                &.error {
+                    .form-message {
+                        @include text(DMS-R, var(--fs-body2), var(--lh-body2), var(--red-cl), none);
+                        letter-spacing: var(--ls-body2);
+                        position: absolute;
+                        bottom: -30px;
+                        @include transition(var(--duration));
+                    }
+                    .form-input {
+                        border: 1px solid var(--red-cl);
+                    }
+                    @include xs {
+                        .form-message {
+                            right: 0;
+                        }
+                    }
+                }
+            }
+            .btnctr {
+                padding-top: 20px;
+            }
+            &-input {
+                background: var(--blue-dark-cl);
+                height: 68px;
+                padding: 20.5px 25px;
+                color: var(--white-cl);
+                @include transition(var(--duration));
+                &:hover {
+                    border: 1px solid var(--white-cl);
+                }
+                &:focus {
+                    border: 1px solid var(--main-cl);
+                }
+                &::placeholder {
+                    color: var(--white-cl);
+                }
+            }
+            .label {
+                @include text(DMS-B, var(--fs-text-label), var(--lh-text-label), var(--white-cl), uppercase);
+                letter-spacing: var(--ls-text-label);
+                margin-bottom: 12px;
+            }
+        }
+        .aside {
+            grid-area: 1/9/2/13;
+            .textbox {
+                margin-bottom: 32px;
+                .heading {
+                    font-size: 2.2rem;
+                    line-height: 3.1rem;
+                    letter-spacing: 0.022rem;
+                    margin-bottom: 12px;
+                }
+            }
+            .list {
+                .item {
+                    display: flex;
+                    align-items: center;
+                    .box-icon {
+                        &.--c {
+                            margin-right: 15px;
+                            position: relative;
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                @include transform(translate(-45%, -48%));
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        margin-top: 24px;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+        @include sm {
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+            .form {
+                margin-bottom: 45px;
+            }
+            .aside {
+                .textbox {
+                    .desc {
+                        max-width: 50%;
+                    }
+                }
+            }
+        }
+        @include xs {
+            padding-top: calc(48px + var(--height-header));
+            .blur {
+                &.--section {
+                    top: 0%;
+                    right: 60%;
+                    @include transform(translate(-60%, -65%));
+                    img {
+                        width: 500%;
+                    }
+                }
+            }
+            .heading {
+                &.--h1 {
+                    margin-bottom: 40px;
+                }
+            }
+            .aside {
+                .textbox {
+                    margin-bottom: 24px;
+                    .desc {
+                        max-width: 358px;
+                    }
+                }
+            }
+            .form-container {
+                flex-direction: column;
+                gap: 0;
+            }
+            .form-group {
+                margin-bottom: 24px;
+            }
+            .form {
+                margin-right: 0;
+                .btnctr {
+                    padding-top: 10px;
+                }
+            }
+        }
+        @include xxs {
+            .form {
+                .btnctr {
+                    .btn {
+                        &.--main {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .faq {
+        width: 100%;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        .heading {
+            &.--h1 {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 80px;
+            }
+        }
+        &__list {
+            margin: 0 auto;
+            max-width: 872px;
+        }
+        &__item {
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--black-02);
+            @include transition(var(--duration));
+            &-title {
+                padding: 32px 8px 16px 8px;
+                position: relative;
+                cursor: pointer;
+                @include transition(var(--duration));
+                &::after {
+                    content: "";
+                    width: 27px;
+                    height: 2px;
+                    background: var(--white-cl);
+                    border-radius: 100px;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    @include transform(translate(0, -50%));
+                    @include transition(var(--duration))
+                }
+                &::before {
+                    content: "";
+                    width: 27px;
+                    height: 2px;
+                    background: var(--white-cl);
+                    border-radius: 100px;
+                    position: absolute;
+                    @include transition(var(--duration));
+                    right: 0;
+                    top: 50%;
+                    // @include transform();
+                    @include transform(translate(0, -50%) rotate(90deg));
+                }
+                &.active {
+                    &::before {
+                        @include transform(translate(0, -50%) rotate(0deg));
+                    }
+                }
+            }
+            &-text {
+                padding: 0 8px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+            }
+        }
+        @include xs {
+            padding-top: 80px;
+            padding-bottom: 106px;
+        }
+        @include xxs {
+            .heading {
+                &.--h1 {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}

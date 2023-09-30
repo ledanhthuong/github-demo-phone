@@ -1,0 +1,625 @@
+/*! Flickity v2.3.0
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+    position: relative;
+}
+
+.flickity-enabled:focus {
+    outline: none;
+}
+
+.flickity-viewport {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.flickity-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+
+/* ---- flickity-button ---- */
+
+.flickity-button {
+    position: absolute;
+    background: hsla(0, 0%, 100%, 0.75);
+    border: none;
+    color: #333;
+}
+
+.flickity-button:hover {
+    background: white;
+    cursor: pointer;
+}
+
+.flickity-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px #19F;
+}
+
+.flickity-button:active {
+    opacity: 0.6;
+}
+
+.flickity-button:disabled {
+    opacity: 0.3;
+    cursor: auto;
+    /* prevent disabled button from capturing pointer up event. #716 */
+    pointer-events: none;
+}
+
+.flickity-button-icon {
+    fill: currentColor;
+}
+
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    /* vertically center */
+    transform: translateY(-50%);
+}
+
+.flickity-prev-next-button.previous {
+    left: 10px;
+}
+
+.flickity-prev-next-button.next {
+    right: 10px;
+}
+
+
+/* right to left */
+
+.flickity-rtl .flickity-prev-next-button.previous {
+    left: auto;
+    right: 10px;
+}
+
+.flickity-rtl .flickity-prev-next-button.next {
+    right: auto;
+    left: 10px;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
+}
+
+
+/* ---- page dots ---- */
+
+.flickity-page-dots {
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots {
+    direction: rtl;
+}
+
+.flickity-page-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    background: #333;
+    border-radius: 50%;
+    opacity: 0.25;
+    cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+    opacity: 1;
+}
+
+//Fancybox
+:root {
+    --f-spinner-width: 36px;
+    --f-spinner-height: 36px;
+    --f-spinner-color-1: rgba(0, 0, 0, 0.1);
+    --f-spinner-color-2: rgba(17, 24, 28, 0.8);
+    --f-spinner-stroke: 2.75
+}
+
+.f-spinner {
+    margin: auto;
+    padding: 0;
+    width: var(--f-spinner-width);
+    height: var(--f-spinner-height)
+}
+
+.f-spinner svg {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    animation: f-spinner-rotate 2s linear infinite
+}
+
+.f-spinner svg * {
+    stroke-width: var(--f-spinner-stroke);
+    fill: none
+}
+
+.f-spinner svg *:first-child {
+    stroke: var(--f-spinner-color-1)
+}
+
+.f-spinner svg *:last-child {
+    stroke: var(--f-spinner-color-2);
+    animation: f-spinner-dash 2s ease-in-out infinite
+}
+
+@keyframes f-spinner-rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes f-spinner-dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124
+    }
+}
+
+.f-zoomInUp {
+    animation: .2s ease-out .1s both f-zoomInUp
+}
+
+.f-zoomOutDown {
+    animation: .2s ease-out both f-zoomOutDown
+}
+
+@keyframes f-zoomInUp {
+    from {
+        transform: scale(0.975) translate3d(0, 16px, 0);
+        opacity: 0
+    }
+    to {
+        transform: scale(1) translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes f-zoomOutDown {
+    to {
+        transform: scale(0.975) translate3d(0, 16px, 0);
+        opacity: 0
+    }
+}
+
+.f-throwOutUp {
+    animation: .175s ease-out both f-throwOutUp
+}
+
+.f-throwOutDown {
+    animation: .175s ease-out both f-throwOutDown
+}
+
+@keyframes f-throwOutUp {
+    to {
+        transform: translate3d(0, -150px, 0);
+        opacity: 0
+    }
+}
+
+@keyframes f-throwOutDown {
+    to {
+        transform: translate3d(0, 150px, 0);
+        opacity: 0
+    }
+}
+
+.f-fadeIn {
+    animation: .2s ease both f-fadeIn;
+    z-index: 2
+}
+
+.f-fadeOut {
+    animation: .2s ease both f-fadeOut;
+    z-index: 1
+}
+
+@keyframes f-fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes f-fadeOut {
+    100% {
+        opacity: 0
+    }
+}
+
+.f-fadeSlowIn {
+    animation: .5s ease both f-fadeSlowIn;
+    z-index: 2
+}
+
+.f-fadeSlowOut {
+    animation: .5s ease both f-fadeSlowOut;
+    z-index: 1
+}
+
+@keyframes f-fadeSlowIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes f-fadeSlowOut {
+    100% {
+        opacity: 0
+    }
+}
+
+.f-fadeFastIn {
+    animation: .2s ease-out both f-fadeFastIn;
+    z-index: 2
+}
+
+.f-fadeFastOut {
+    animation: .2s ease-out both f-fadeFastOut;
+    z-index: 2
+}
+
+@keyframes f-fadeFastIn {
+    0% {
+        opacity: .75
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes f-fadeFastOut {
+    100% {
+        opacity: 0
+    }
+}
+
+.f-crossfadeIn {
+    animation: .2s ease-out both f-crossfadeIn;
+    z-index: 2
+}
+
+.f-crossfadeOut {
+    animation: .1s linear .1s both f-crossfadeOut;
+    z-index: 1
+}
+
+@keyframes f-crossfadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes f-crossfadeOut {
+    100% {
+        opacity: 0
+    }
+}
+
+.f-slideIn.from-next {
+    animation: .85s cubic-bezier(0.16, 1, 0.3, 1) f-slideInNext
+}
+
+.f-slideIn.from-prev {
+    animation: .85s cubic-bezier(0.16, 1, 0.3, 1) f-slideInPrev
+}
+
+.f-slideOut.to-next {
+    animation: .85s cubic-bezier(0.16, 1, 0.3, 1) f-slideOutNext
+}
+
+.f-slideOut.to-prev {
+    animation: .85s cubic-bezier(0.16, 1, 0.3, 1) f-slideOutPrev
+}
+
+@keyframes f-slideInPrev {
+    0% {
+        transform: translateX(100%)
+    }
+    100% {
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes f-slideInNext {
+    0% {
+        transform: translateX(-100%)
+    }
+    100% {
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes f-slideOutNext {
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes f-slideOutPrev {
+    100% {
+        transform: translateX(100%)
+    }
+}
+
+.f-classicIn.from-next {
+    animation: .85s cubic-bezier(0.16, 1, 0.3, 1) f-classicInNext;
+    z-index: 2
+}
+
+.f-classicIn.from-prev {
+    animation: .85s cubic-bezier(0.16, 1, 0.3, 1) f-classicInPrev;
+    z-index: 2
+}
+
+.f-classicOut.to-next {
+    animation: .85s cubic-bezier(0.16, 1, 0.3, 1) f-classicOutNext;
+    z-index: 1
+}
+
+.f-classicOut.to-prev {
+    animation: .85s cubic-bezier(0.16, 1, 0.3, 1) f-classicOutPrev;
+    z-index: 1
+}
+
+@keyframes f-classicInNext {
+    0% {
+        transform: translateX(-75px);
+        opacity: 0
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes f-classicInPrev {
+    0% {
+        transform: translateX(75px);
+        opacity: 0
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes f-classicOutNext {
+    100% {
+        transform: translateX(-75px);
+        opacity: 0
+    }
+}
+
+@keyframes f-classicOutPrev {
+    100% {
+        transform: translateX(75px);
+        opacity: 0
+    }
+}
+
+:root {
+    --f-button-width: 40px;
+    --f-button-height: 40px;
+    --f-button-border: 0;
+    --f-button-border-radius: 0;
+    --f-button-color: #374151;
+    --f-button-bg: #f8f8f8;
+    --f-button-hover-bg: #e0e0e0;
+    --f-button-active-bg: #d0d0d0;
+    --f-button-shadow: none;
+    --f-button-transition: all 0.15s ease;
+    --f-button-transform: none;
+    --f-button-svg-width: 20px;
+    --f-button-svg-height: 20px;
+    --f-button-svg-stroke-width: 1.5;
+    --f-button-svg-fill: none;
+    --f-button-svg-filter: none;
+    --f-button-svg-disabled-opacity: 0.65
+}
+
+.f-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: var(--f-button-width);
+    height: var(--f-button-height);
+    border: var(--f-button-border);
+    border-radius: var(--f-button-border-radius);
+    color: var(--f-button-color);
+    background: var(--f-button-bg);
+    box-shadow: var(--f-button-shadow);
+    pointer-events: all;
+    cursor: pointer;
+    transition: var(--f-button-transition)
+}
+
+@media(hover: hover) {
+    .f-button:hover:not([disabled]) {
+        color: var(--f-button-hover-color);
+        background-color: var(--f-button-hover-bg)
+    }
+}
+
+.f-button:active:not([disabled]) {
+    background-color: var(--f-button-active-bg)
+}
+
+.f-button:focus:not(:focus-visible) {
+    outline: none
+}
+
+.f-button:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 var(--f-button-outline, 2px) var(--f-button-outline-color, var(--f-button-color))
+}
+
+.f-button svg {
+    width: var(--f-button-svg-width);
+    height: var(--f-button-svg-height);
+    fill: var(--f-button-svg-fill);
+    stroke: currentColor;
+    stroke-width: var(--f-button-svg-stroke-width);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: opacity .15s ease;
+    transform: var(--f-button-transform);
+    filter: var(--f-button-svg-filter);
+    pointer-events: none
+}
+
+.f-button[disabled] {
+    cursor: default
+}
+
+.f-button[disabled] svg {
+    opacity: var(--f-button-svg-disabled-opacity)
+}
+
+.f-carousel__nav .f-button.is-prev,
+.f-carousel__nav .f-button.is-next,
+.fancybox__nav .f-button.is-prev,
+.fancybox__nav .f-button.is-next {
+    position: absolute;
+    z-index: 1
+}
+
+.is-horizontal .f-carousel__nav .f-button.is-prev,
+.is-horizontal .f-carousel__nav .f-button.is-next,
+.is-horizontal .fancybox__nav .f-button.is-prev,
+.is-horizontal .fancybox__nav .f-button.is-next {
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.is-horizontal .f-carousel__nav .f-button.is-prev,
+.is-horizontal .fancybox__nav .f-button.is-prev {
+    left: var(--f-button-prev-pos)
+}
+
+.is-horizontal .f-carousel__nav .f-button.is-next,
+.is-horizontal .fancybox__nav .f-button.is-next {
+    right: var(--f-button-next-pos)
+}
+
+.is-horizontal.is-rtl .f-carousel__nav .f-button.is-prev,
+.is-horizontal.is-rtl .fancybox__nav .f-button.is-prev {
+    left: auto;
+    right: var(--f-button-next-pos)
+}
+
+.is-horizontal.is-rtl .f-carousel__nav .f-button.is-next,
+.is-horizontal.is-rtl .fancybox__nav .f-button.is-next {
+    right: auto;
+    left: var(--f-button-prev-pos)
+}
+
+.is-vertical .f-carousel__nav .f-button.is-prev,
+.is-vertical .f-carousel__nav .f-button.is-next,
+.is-vertical .fancybox__nav .f-button.is-prev,
+.is-vertical .fancybox__nav .f-button.is-next {
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.is-vertical .f-carousel__nav .f-button.is-prev,
+.is-vertical .fancybox__nav .f-button.is-prev {
+    top: var(--f-button-next-pos)
+}
+
+.is-vertical .f-carousel__nav .f-button.is-next,
+.is-vertical .fancybox__nav .f-button.is-next {
+    bottom: var(--f-button-next-pos)
+}
+
+.is-vertical .f-carousel__nav .f-button.is-prev svg,
+.is-vertical .f-carousel__nav .f-button.is-next svg,
+.is-vertical .fancybox__nav .f-button.is-prev svg,
+.is-vertical .fancybox__nav .f-button.is-next svg {
+    transform: rotate(90deg)
+}
+
+html.with-fancybox {
+    width: auto;
+    overflow: visible;
+    scroll-behavior: auto
+}
+
+html.with-fancybox body {
+    touch-action: none
+}
+
+html.with-fancybox body.hide-scrollbar {
+    width: auto;
+    margin-right: calc(var(--fancybox-body-margin, 0px) + var(--fancybox-scrollbar-compensate, 0px));
+    overflow: hidden !important;
+    overscroll-behavior-y: none
+}

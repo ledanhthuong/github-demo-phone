@@ -1,0 +1,506 @@
+// css img, button, title, icon, elements...
+img {
+    max-width: 100%;
+    height: auto;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    display: block;
+    outline: 0;
+    object-fit: contain;
+    &.--center {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+strong {
+    font-family: ab; // optional
+}
+
+.--hidden {
+    display: none;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+// === LAYOUT GIRD ===
+.--grid {
+    display: grid;
+    gap: var(--gap-grid);
+    &.--layout-12 {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    &.--layout-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &.--layout-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &.--layout-1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+// === BUTTON ===
+.btn {
+    height: var(--height-button);
+    width: fit-content;
+    padding: 27px 32px;
+    border-radius: 80px;
+    cursor: pointer;
+    @include transition(var(--duration));
+    white-space: nowrap;
+    .textbtn {
+        @include text(DMS-B, var(--fs-text-button), var(--lh-text-button), var(--white-cl), uppercase);
+        letter-spacing: var(--ls-text-button);
+        height: 100%;
+        @include mid(true);
+    }
+    &.--header {
+        height: var(--height-button-header);
+        padding: 20px 32px;
+        background: var(--main-cl);
+        &:hover {
+            background: var(--blue-light-cl);
+        }
+    }
+    &.--main {
+        background: var(--main-cl);
+        &:hover {
+            background: var(--blue-light-cl);
+        }
+    }
+    &.--dark {
+        background: rgba(255, 255, 255, 0.1);
+        &:hover {
+            background: var(--main-cl);
+        }
+    }
+    &.--white {
+        background: var(--white-cl);
+        .textbtn {
+            color: var(--main-cl);
+        }
+        &:hover {
+            background: var(--blue-light-cl);
+            .textbtn {
+                color: var(--white-cl);
+            }
+        }
+    }
+    &.--icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--main-cl);
+        .textbtn {
+            padding-left: 9px;
+        }
+        &:hover {
+            background: var(--blue-light-cl);
+        }
+    }
+}
+
+// === button play ===
+.btn-play {
+    @include size(100px, 100px, true);
+    background: var(--black-02);
+    @include mid(true);
+    cursor: pointer;
+    @include transition(Var(--duration));
+    svg {
+        path {
+            @include transition(Var(--duration));
+        }
+    }
+    &:hover {
+        border: 1px solid var(--main-cl);
+        svg {
+            path {
+                fill: var(--main-cl);
+            }
+        }
+    }
+}
+
+.btn-tag {
+    width: fit-content;
+    height: var(--height-button-tag);
+    padding: 9px 14.1578px 9px 14.3578px;
+    border-radius: 1000px;
+    background: var(--main-cl);
+    cursor: initial;
+    .texttag {
+        @include text(DMS-M, var(--fs-text-tag), var(--lh-text-tag), var(--white-cl), uppercase);
+        letter-spacing: var(--ls-text-tag);
+        height: 100%;
+        @include mid(true);
+    }
+    &.--tab {
+        padding: 11px 24px;
+        background: var(--black-01);
+        @include transition(var(--duration));
+        .texttag {
+            @include text(DMS-R, var(--fs-body2), var(--lh-body2), var(--white-cl), none);
+            letter-spacing: var(--ls-body2);
+        }
+        &:hover {
+            background: var(--main-cl);
+        }
+        &.active {
+            background: var(--main-cl);
+        }
+    }
+}
+
+// === HEADING ===
+.heading {
+    font-family: DMS-B;
+    color: var(--white-cl);
+    &.--h1 {
+        font-size: var(--fs-h1);
+        line-height: var(--lh-h1);
+        letter-spacing: var(--ls-h1);
+    }
+    &.--h2 {
+        font-size: var(--fs-h2);
+        line-height: var(--lh-h2);
+        letter-spacing: var(--ls-h2);
+    }
+    &.--h3 {
+        font-size: var(--fs-h3);
+        line-height: var(--lh-h3);
+        letter-spacing: var(--ls-h3);
+    }
+    &.--label {
+        font-size: var(--fs-label);
+        line-height: var(--lh-label);
+        letter-spacing: var(--ls-label);
+    }
+}
+
+.desc {
+    font-family: DMS-R;
+    &.--body1 {
+        font-size: var(--fs-body1);
+        line-height: var(--lh-body1);
+        letter-spacing: var(--ls-body1);
+    }
+    &.--body2 {
+        font-size: var(--fs-body2);
+        line-height: var(--lh-body2);
+        letter-spacing: var(--ls-body2);
+    }
+}
+
+// === TEXTBOX ===
+.textbox {
+    display: flex;
+    flex-direction: column;
+    &.--mid {
+        align-items: center;
+        justify-content: center;
+    }
+    &.--left {
+        align-items: flex-start;
+    }
+    &.--right {
+        align-items: flex-end;
+    }
+    &.--between {
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        .desc {
+            max-width: 461px;
+        }
+    }
+    @include xs {
+        .heading {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+// === box icon === 
+// ==box===
+.box-icon {
+    background: var(--main-cl);
+    &.--l {
+        display: block;
+        width: 68px;
+        height: 68px;
+        @include mid(true);
+        border-radius: 20px;
+    }
+    &.--s {
+        width: 46px;
+        height: 46px;
+        border-radius: 13px;
+        @include mid(true);
+        margin-right: 17px;
+    }
+    &.--c {
+        width: 38px;
+        height: 38px;
+        border-radius: 100%;
+        @include mid(true);
+    }
+}
+
+// === BOX ===
+.box {
+    background: var(--blue-dark-cl);
+    &.--icon {
+        .textbox {
+            margin-top: 20px;
+            .heading {
+                margin-bottom: 7px;
+            }
+        }
+    }
+    &.--author {
+        padding: 66px 50px;
+        border-radius: 40px;
+    }
+    &.--flow {
+        padding: 58px 32px;
+        display: flex;
+        border-radius: 40px;
+    }
+}
+
+// === AUTHOR ===
+.author {
+    display: flex;
+    align-items: center;
+    .avatar {
+        @include size(58px, 58px, true);
+        overflow: hidden;
+        margin-right: 22px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .information {
+        .name {
+            @include text(DMS-B, 16px, 18px, var(--white-cl), uppercase);
+            letter-spacing: 0.8px;
+            margin-bottom: 6px
+        }
+        .role {
+            @include text(DMS-R, 16px, 18px, var(--white-cl), uppercase);
+            letter-spacing: 0.8px;
+        }
+    }
+}
+
+// === POST ===
+.post {
+    .thumbnail {
+        aspect-ratio: 382/215;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 104%;
+            object-fit: cover;
+        }
+    }
+    .btn-tag {
+        position: absolute;
+        top: -18px;
+        z-index: 1;
+    }
+    .content {
+        position: relative;
+        padding: 42px 31px 24px 23px;
+        background: var(--blue-dark-cl);
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        .textbox {
+            padding-bottom: 39px;
+            border-bottom: 1px solid var(--black-01);
+            margin-bottom: 23px;
+            .heading {
+                font-size: 2.2rem;
+                line-height: 3.1rem;
+                letter-spacing: 0rem;
+                margin-bottom: 16px;
+                max-width: 328px;
+                @include overtext(2);
+            }
+            .desc {
+                @include overtext(3);
+            }
+        }
+    }
+    &.--blog {
+        gap: 0;
+        .thumbnail {
+            grid-area: 1/2/2/3;
+            aspect-ratio: 586/334;
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 40px;
+        }
+        .btn-tag {
+            top: 58px
+        }
+        .content {
+            grid-area: 1/1/2/2;
+            border-bottom-left-radius: 40px;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 0;
+            @include transform(translateY(0));
+            padding: 115px 78px 58px 47px;
+            .textbox {
+                border-bottom: initial;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                .heading {
+                    max-width: 100%;
+                    @include text(DMS-B, 2.8rem, 4rem, var(--white-cl), none);
+                    letter-spacing: 0.028rem;
+                    @include overtext(2);
+                }
+                .desc {
+                    @include overtext(3);
+                }
+            }
+            .author {
+                display: none;
+            }
+        }
+    }
+}
+
+// === FORM GROUP ===
+.form-group {
+    position: relative;
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        -webkit-text-fill-color: var(--white-cl);
+        -webkit-box-shadow: 0 0 0px 1000px var(--blue-dark-cl) inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+    input {
+        border: 1px solid #010725;
+        border-radius: 100px;
+        outline: none;
+        &::placeholder {
+            @include text(DMS-R, var(--fs-body2), var(--lh-body2), var(--blue-bg-cl), none);
+            letter-spacing: 0;
+        }
+    }
+    .btn-submit {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        @include transform(translate(-7%, -50%));
+        height: 64px;
+        padding: 24px 26px;
+        @include text(DMS-B, var(--fs-text-menu), var(--lh-text-menu), var(--white-cl), uppercase);
+        letter-spacing: var(--ls-text-menu);
+        background: var(--main-cl);
+        cursor: pointer;
+        @include transition(var(--duration));
+        &:hover {
+            background: var(--blue-light-cl);
+        }
+    }
+    &.--mail {
+        input {
+            border: initial;
+        }
+        .input-email {
+            width: 100%;
+            padding: 27px 169px 27px 16px;
+        }
+        input[type="text"] {
+            &:focus {
+                caret-color: var(--main-cl);
+            }
+        }
+    }
+}
+
+// === PAGINATION ===
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btnctr {
+        @include size(36px, 36px, true);
+        @include mid(true);
+        // padding: 12px 14.5px 13px 16px;
+        @include transition(var(--duration));
+        background: var(--blue-light-cl);
+        cursor: pointer;
+        svg {
+            @include transform(translateX(20%));
+        }
+        &.--prev {
+            @include transform(rotate(180deg));
+        }
+        &:hover {
+            background: var(--main-cl);
+        }
+        &.disable {
+            background: var(--black-01);
+            svg {
+                path {
+                    stroke: var(--black-02);
+                }
+            }
+        }
+    }
+    .number {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        margin-right: 8px;
+        li {
+            margin-left: 8px;
+            margin-right: 8px;
+            cursor: pointer;
+            .page {
+                color: var(--white-cl);
+                @include transition(var(--duration));
+                &:hover {
+                    color: var(--blue-light-cl);
+                }
+                &.is-selected {
+                    color: var(--blue-light-cl);
+                }
+            }
+        }
+    }
+}

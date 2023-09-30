@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>ABOUT | FINANCE</title>
+
+    <meta name="title" content="CFD Circle" />
+    <meta name="description" content="" />
+    <meta name="keyword" content="" />
+
+    <link rel="canonical" href="https://cfdcircle.vn" />
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Meta Tag Facebook -->
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="CFD Circle" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="CFD Circle" />
+    <meta property="og:image" content="" />
+
+    <!-- Meta Tag Twitter -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+    <Style>
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #010725;
+            z-index: 9999;
+            opacity: 1;
+            pointer-events: auto;
+            transition: 0.4s;
+        }
+        
+        .loading .percent {
+            color: #fff;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.4s;
+        }
+        
+        .loading .loading-page {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 160px;
+            height: 5px;
+            background: #0328EE;
+            border-radius: 100px;
+        }
+        
+        .loading .loading-page span {
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(0%, -50%);
+            width: 0%;
+            height: 5px;
+            transition: width 0.4s;
+            background: #fff;
+            border-radius: 100px;
+        }
+        
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </Style>
+
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
+</head>
+
+<body class="aboutpage">
+    <div class="loading">
+        <div class="percent">0%</div>
+        <div class="loading-page">
+            <span></span>
+        </div>
+    </div>
+    <div class="progress-bar">
+        <div></div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <!-- === MENU LAPTOP ===  -->
+            <div class="header__left">
+                <a class="logo" href="./" target="_blank">
+                    <img src="./img/logo.svg" alt="logo-main">
+                </a>
+                <ul class="menu">
+                    <li><a href="./index.html" target="_blank" rel="noopener">home</a></li>
+                    <li><a href="./about.html" target="_blank" rel="noopener" class=" --active">about</a></li>
+                    <li><a href="./pricing.html" target="_blank" rel="noopener">pricing</a></li>
+                    <li><a href="./tokens.html" target="_blank" rel="noopener">tokens</a></li>
+                    <li><a href="./blog.html" target="_blank" rel="noopener">blog</a></li>
+                    <li><a href="./contact.html" target="_blank" rel="noopener">contact us</a></li>
+                </ul>
+            </div>
+            <div class="header__right">
+                <a href="https://play.google.com/store/games?hl=vi&gl=US" target="_blank" rel="noopener" class="btn --header">
+                    <span class="textbtn">Download App</span>
+                </a>
+            </div>
+            <!-- === MENU MOBLIE === -->
+            <nav class="nav">
+                <a class="nav__left" href="./">
+                    <img src="./img/logo-mobile.svg" alt="logo-mobile">
+                </a>
+                <div class="nav__right">
+                    <div class="nav__right-close">
+                        <span></span>
+                    </div>
+                    <div class="nav__right-menu">
+                        <img src="./img/blur-menu-mobile.svg" alt="blur-menu-mobile">
+                        <div class="menu">
+                            <ul>
+                                <li><a href="./index.html" target="_blank">home</a></li>
+                                <li><a href="./about.html" target="_blank" class=" --active">about</a></li>
+                                <li><a href="./pricing.html" target="_blank">pricing</a></li>
+                                <li><a href="./tokens.html" target="_blank">tokens</a></li>
+                                <li><a href="./blog.html" target="_blank">blog</a></li>
+                                <li><a href="./contact.html" target="_blank">contact us</a></li>
+                            </ul>
+                            <a href="https://play.google.com/store/games?hl=vi&gl=US" target="_blank" class="btn --main">
+                                <span class="textbtn">Download App</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- === MAIN === -->
+    <main class="main">
+        <section class="sctitle">
+            <div class="container">
+                <div class="blur --section">
+                    <img src="./img/blur-section.svg" alt="blur-100">
+                </div>
+                <div class="textbox --mid">
+                    <h1 class="heading --h1">About Finance Flow</h1>
+                    <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aenean dis placerat. Scelerisque imperdiet vitae dolor non aliquam. Malesuada.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="scflow">
+            <div class="container">
+                <div class="textbox --between">
+                    <h2 class="heading --h2">What drives Finance Flow?</h2>
+                    <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</p>
+                </div>
+                <div class="scflow__list --grid">
+                    <!-- === box 1 === -->
+                    <figure class="box --flow">
+                        <i class="box-icon --l">
+                            <img src="./img/icon-group.svg" alt="icon-group">
+                        </i>
+                        <div class="textbox">
+                            <h3 class="heading --label">Open Source</h3>
+                            <p class="desc --body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna in proin dui purus bibendum cras. Morbi cursus nunc.
+                            </p>
+                        </div>
+                    </figure>
+                    <!-- === box 2 === -->
+                    <figure class="box --flow">
+                        <i class="box-icon --l">
+                            <img src="./img/icon-earth.svg" alt="icon-earth">
+                        </i>
+                        <div class="textbox">
+                            <h3 class="heading --label">worldwide</h3>
+                            <p class="desc --body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna in proin dui purus bibendum cras. Morbi cursus nunc.
+                            </p>
+                        </div>
+                    </figure>
+                    <!-- === box 3 === -->
+                    <figure class="box --flow">
+                        <i class="box-icon --l">
+                            <img src="./img/icon-search.svg" alt="icon-search">
+                        </i>
+                        <div class="textbox">
+                            <h3 class="heading --label">Transparent</h3>
+                            <p class="desc --body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna in proin dui purus bibendum cras. Morbi cursus nunc.
+                            </p>
+                        </div>
+                    </figure>
+                    <!-- === box 4 === -->
+                    <figure class="box --flow">
+                        <i class="box-icon --l">
+                            <img src="./img/icon-map.svg" alt="icon-map">
+                        </i>
+                        <div class="textbox">
+                            <h3 class="heading --label">Community Driven</h3>
+                            <p class="desc --body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna in proin dui purus bibendum cras. Morbi cursus nunc.
+                            </p>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="scour">
+            <div class="container --grid --layout-12">
+                <div class="scour__left">
+                    <div class="textbox">
+                        <h2 class="heading --h2">Our mission</h2>
+                        <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo, ultricies. Sollicitudin odio elementum urna placerat lacus, vulputate. Non malesuada viverra et ultrices cras. Tincidunt tempor, blandit augue
+                            ac feugiat. Praesent arcu tempus ullamcorper quisque in. Magna fermentum, lacus, fermentum arcu.
+                        </p>
+                        <p class="desc --body1">Vulputate pellentesque proin facilisis dignissim gravida sed faucibus nunc. Nunc eget pharetra, in vitae porta lacus. Elit in nisl, in quis nulla tellus suscipit id. Semper velit odio cras pretium tristique habitant. Elit eu penatibus
+                            congue orci turpis. Enim diam id.</p>
+                    </div>
+                    <div class="textbox">
+                        <h2 class="heading --h2">Our story</h2>
+                        <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo, ultricies. Sollicitudin odio elementum urna placerat lacus, vulputate. Non malesuada viverra et ultrices cras. Tincidunt tempor, blandit augue
+                            ac feugiat. Praesent arcu tempus ullamcorper quisque in. Magna fermentum, lacus, fermentum arcu.
+                        </p>
+                        <p class="desc --body1">Vulputate pellentesque proin facilisis dignissim gravida sed faucibus nunc. Nunc eget pharetra, in vitae porta lacus. Elit in nisl, in quis nulla tellus suscipit id. Semper velit odio cras pretium tristique habitant. Elit eu penatibus
+                            congue orci turpis. Enim diam id.</p>
+                    </div>
+                </div>
+                <div class="scour__right">
+                    <img src="./img/thumbnail-our.jpg" alt="thumbnail-our">
+                    <img src="./img/planet.svg" alt="plannet">
+                </div>
+            </div>
+        </section>
+        <section class="sctimeline">
+            <div class="container --grid --layout-12">
+                <div class="sctimeline__left">
+                    <div class="textbox --left">
+                        <h2 class="heading --h2">Timeline</h2>
+                        <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                    </div>
+                </div>
+                <div class="sctimeline__right">
+                    <div class="sctimeline__list">
+                        <div class="sctimeline__list-item">
+                            <h3 class="number">2014</h3>
+                            <div class="textbox">
+                                <h4 class="heading --label">Announcement</h4>
+                                <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis vivamus at mattis bibendum congue cras id interdum. Risus leo et.</p>
+                            </div>
+                        </div>
+                        <div class="sctimeline__list-item">
+                            <h3 class="number">2016</h3>
+                            <div class="textbox">
+                                <h4 class="heading --label">Announcement</h4>
+                                <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis vivamus at mattis bibendum congue cras id interdum. Risus leo et.</p>
+                            </div>
+                        </div>
+                        <div class="sctimeline__list-item">
+                            <h3 class="number">2018</h3>
+                            <div class="textbox">
+                                <h4 class="heading --label">Announcement</h4>
+                                <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis vivamus at mattis bibendum congue cras id interdum. Risus leo et.</p>
+                            </div>
+                        </div>
+                        <div class="sctimeline__list-item">
+                            <h3 class="number">2022</h3>
+                            <div class="textbox">
+                                <h4 class="heading --label">Announcement</h4>
+                                <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis vivamus at mattis bibendum congue cras id interdum. Risus leo et.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="scourteam">
+            <div class="container">
+                <div class="textbox --between">
+                    <h2 class="heading --h2">Our Team</h2>
+                    <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo, ultricies.</p>
+                </div>
+                <div class="scourteam__list --grid --layout-12">
+                    <div class="scourteam__list-item">
+                        <div class="avatar">
+                            <img src="./img/team-1.png" alt="avatar-1">
+                        </div>
+                        <div class="info">
+                            <h6 class="name">John Carter</h6>
+                            <span class="role">CEO & CO-Founder</span>
+                        </div>
+                    </div>
+                    <div class="scourteam__list-item">
+                        <div class="avatar">
+                            <img src="./img/team-2.png" alt="avatar-2">
+                        </div>
+                        <div class="info">
+                            <h6 class="name">Sophie Moore</h6>
+                            <span class="role">Community Lead</span>
+                        </div>
+                    </div>
+                    <div class="scourteam__list-item">
+                        <div class="avatar">
+                            <img src="./img/team-3.png" alt="avatar-3">
+                        </div>
+                        <div class="info">
+                            <h6 class="name">Alex Turner</h6>
+                            <span class="role">Operations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="advertisement">
+            <div class="container">
+                <h2 class="heading --h2">Investors</h2>
+                <span class="title">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo, ultricies.
+                </span>
+                <div class="list-company">
+                    <img src="./img/icon-company-1.svg" alt="company-1" class="company">
+                    <img src="./img/icon-company-2.svg" alt="company-2" class="company">
+                    <img src="./img/icon-company-3.svg" alt="company-3" class="company">
+                    <img src="./img/icon-company-4.svg" alt="company-4" class="company">
+                    <img src="./img/icon-company-5.svg" alt="company-5" class="company">
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- === FOOTER === -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="./" target="_blank" class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </a>
+                <div class="social">
+                    <a href="https://cfdcircle.vn/?fbclid=IwAR028LbzmAQj-4VfyPcACzX2mP8Jw54XzM4BzMQJaJjVX9YBy6ausbuEkBQ" target="_blank" class="social__link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.0223 4.84375C7.16518 4.84375 4.88839 7.16518 4.88839 9.97768C4.88839 12.8348 7.16518 15.1116 10.0223 15.1116C12.8348 15.1116 15.1562 12.8348 15.1562 9.97768C15.1562 7.16518 12.8348 4.84375 10.0223 4.84375ZM10.0223 13.3259C8.19196 13.3259 6.67411 11.8527 6.67411 9.97768C6.67411 8.14732 8.14732 6.67411 10.0223 6.67411C11.8527 6.67411 13.3259 8.14732 13.3259 9.97768C13.3259 11.8527 11.8527 13.3259 10.0223 13.3259ZM16.5402 4.66518C16.5402 3.99554 16.0045 3.45982 15.3348 3.45982C14.6652 3.45982 14.1295 3.99554 14.1295 4.66518C14.1295 5.33482 14.6652 5.87054 15.3348 5.87054C16.0045 5.87054 16.5402 5.33482 16.5402 4.66518ZM19.933 5.87054C19.8438 4.26339 19.4866 2.83482 18.3259 1.67411C17.1652 0.513393 15.7366 0.15625 14.1295 0.0669643C12.4777 -0.0223214 7.52232 -0.0223214 5.87054 0.0669643C4.26339 0.15625 2.87946 0.513393 1.67411 1.67411C0.513393 2.83482 0.15625 4.26339 0.0669643 5.87054C-0.0223214 7.52232 -0.0223214 12.4777 0.0669643 14.1295C0.15625 15.7366 0.513393 17.1205 1.67411 18.3259C2.87946 19.4866 4.26339 19.8438 5.87054 19.933C7.52232 20.0223 12.4777 20.0223 14.1295 19.933C15.7366 19.8438 17.1652 19.4866 18.3259 18.3259C19.4866 17.1205 19.8438 15.7366 19.933 14.1295C20.0223 12.4777 20.0223 7.52232 19.933 5.87054ZM17.7902 15.8705C17.4777 16.7634 16.7634 17.433 15.9152 17.7902C14.5759 18.3259 11.4509 18.192 10.0223 18.192C8.54911 18.192 5.42411 18.3259 4.12946 17.7902C3.23661 17.433 2.56696 16.7634 2.20982 15.8705C1.67411 14.5759 1.80804 11.4509 1.80804 9.97768C1.80804 8.54911 1.67411 5.42411 2.20982 4.08482C2.56696 3.23661 3.23661 2.56696 4.12946 2.20982C5.42411 1.67411 8.54911 1.80804 10.0223 1.80804C11.4509 1.80804 14.5759 1.67411 15.9152 2.20982C16.7634 2.52232 17.433 3.23661 17.7902 4.08482C18.3259 5.42411 18.192 8.54911 18.192 9.97768C18.192 11.4509 18.3259 14.5759 17.7902 15.8705Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/cfdcircle" target="_blank" class="social__link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.8571 0H2.14286C0.9375 0 0 0.982143 0 2.14286V17.8571C0 19.0625 0.9375 20 2.14286 20H8.25893V13.2143H5.44643V10H8.25893V7.58929C8.25893 4.82143 9.91071 3.25893 12.4107 3.25893C13.6607 3.25893 14.9107 3.48214 14.9107 3.48214V6.20536H13.5268C12.1429 6.20536 11.6964 7.05357 11.6964 7.94643V10H14.7768L14.2857 13.2143H11.6964V20H17.8571C19.0179 20 20 19.0625 20 17.8571V2.14286C20 0.982143 19.0179 0 17.8571 0Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="https://cfdcircle.vn/?fbclid=IwAR028LbzmAQj-4VfyPcACzX2mP8Jw54XzM4BzMQJaJjVX9YBy6ausbuEkBQ" target="_blank" class="social__link">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.47427 20V6.62192H0.313199V20H4.47427ZM2.37136 4.83221C3.71365 4.83221 4.78747 3.71365 4.78747 2.37136C4.78747 1.07383 3.71365 0 2.37136 0C1.07383 0 0 1.07383 0 2.37136C0 3.71365 1.07383 4.83221 2.37136 4.83221ZM20.0447 20V12.6622C20.0447 9.08277 19.2394 6.30872 15.0336 6.30872C13.0201 6.30872 11.6779 7.42729 11.0962 8.45638H11.0515V6.62192H7.06935V20H11.2304V13.3781C11.2304 11.6331 11.5436 9.97763 13.6913 9.97763C15.8389 9.97763 15.8837 11.9463 15.8837 13.5123V20H20.0447Z"
+                                fill="white" />
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+            <div class="footer__mid">
+                <div class="footer__mid-left">
+                    <h6 class="heading --label">Menu</h6>
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="./" target="_blank">home</a>
+                            </li>
+                            <li>
+                                <a href="./about.html" target="_blank">about</a>
+                            </li>
+                            <li>
+                                <a href="./pricing.html" target="_blank">pricing</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="./tokens.html" target="_blank">tokens</a>
+                            </li>
+                            <li>
+                                <a href="./blog.html" target="_blank">blog</a>
+                            </li>
+                            <li>
+                                <a href="./contact.html" target="_blank">contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__mid-right">
+                    <div class="textbox">
+                        <h6 class="heading --label">Download our Application</h6>
+                        <p class="desc --body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nulla integer
+                        </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www.apple.com/vn/" target="_blank" class="btn --icon">
+                            <img src="./img/icon-apple.svg" alt="icon-apple" class="icon">
+                            <span class="textbtn">app store</span>
+                        </a>
+                        <a href="https://play.google.com/store/games?hl=vi&gl=US" target="_blank" class="btn --icon">
+                            <img src="./img/icon-android.svg" alt="icon-apple" class="icon">
+                            <span class="textbtn">play store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span class="desc --body2">
+                    © 2023 CFD Circle, Inc.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
+
+</body>
+
+</html>

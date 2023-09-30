@@ -1,0 +1,113 @@
+.notfound {
+    overflow: hidden;
+    .error404 {
+        height: 100vh;
+        .container {
+            height: 100%;
+            @include mid(true);
+            flex-direction: column;
+        }
+        .error {
+            @include text(DMS-B, 18rem, 16rem, var(--main-cl), uppercase);
+            letter-spacing: 0%;
+            margin-bottom: 15px;
+        }
+        .textbox {
+            margin-bottom: 40px;
+            .heading {
+                margin-bottom: 16px;
+            }
+            .desc {
+                max-width: 557px;
+                text-align: center;
+            }
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            .btn {
+                &.--main {
+                    margin-right: 24px;
+                }
+            }
+        }
+        .blur {
+            &.--section {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-135%, -45%));
+                opacity: 0.6;
+                img {
+                    width: 280%;
+                }
+            }
+        }
+        @include md {
+            .blur {
+                &.--section {
+                    @include transform(translate(-110%, -45%));
+                    img {
+                        width: 230%;
+                    }
+                }
+            }
+        }
+        @include sm {
+            .blur {
+                &.--section {
+                    @include transform(translate(-130%, -45%));
+                    img {
+                        width: 280%;
+                    }
+                }
+            }
+        }
+        @include xs {
+            .textbox {
+                .desc {
+                    max-width: 327px;
+                }
+            }
+            .blur {
+                &.--section {
+                    @include transform(translate(-160%, -45%));
+                    img {
+                        width: 340%;
+                    }
+                }
+            }
+        }
+        @include xxs {
+            .button {
+                flex-direction: column;
+                width: 100%;
+                .btn {
+                    width: 100%;
+                    &.--main {
+                        margin-right: 0px;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+            .blur {
+                &.--section {
+                    @include transform(translate(-180%, -45%));
+                    img {
+                        width: 400%;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 473px) {
+            .blur {
+                &.--section {
+                    @include transform(translate(-230%, -50%));
+                    img {
+                        width: 500%;
+                    }
+                }
+            }
+        }
+    }
+}
